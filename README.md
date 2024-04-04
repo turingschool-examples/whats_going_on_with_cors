@@ -91,17 +91,70 @@ In small groups, designate one person to be the screen sharer.
 1. FE students:, explain what happens once the FE app receives the response.
 1. Once you are finished exploring the code, draw a diagram that illustrates the entire process. Specify which parts are FE and which are BE. 
 
+## Practice Activity
 
+Now that you know how each part of the application handles their request/response cycles, how would you collaborate as a combined team to consume a new set of data? 
 
-# Extension Ideas
+In both applications, implement the ability to list *all* the messages from the BE's database on a new FE page. Follow these steps: 
 
+1. Determine what data will be consumed/exposed via API. (For this exercise, we recommend all the `messages` on an `index` page - you may want to add more to the `seeds.rb` file.)
+2. Write a user story.<br>
+   Example:
+   
+   ```text
+   As a user,
+   when I visit the messages index page (/messages)
+   Then I see a list of all the messages in the system as links
+   And when I click on one of the messages,
+   I am taken to that message's show page (/messages/:id)
+   where I only see that message.
+   ```
+4. Agree on a [JSON contract](https://gist.github.com/cjsim89/2597824466ceeef6c9f3c65cd8d57478) for any requests & their responses required to fulfill the user story.<br>
+   Example:
+   ```text
+   REQUEST: 
+   GET /messages
+   - No request body
+   - No additional headers or keys required
 
-### Create & Consume a New API Endpoint
+   RESPONSE:
+   - JSON format
 
-How would you collaborate as a combined team to consume a new set of data? In both applications, implement the ability to list *all* the messages from the BE's database on a new FE page. 
+   {
+      data: {
+         "type": "message",
+         "id": "1",
+         "attributes": {
+            "text": "Here is a message!"
+         }
+   
+      }
+   }
+   ```
+<br>
 
+# Checks for Understanding
 
-### More Exploration Questions
+### For all students: 
+
+* What are some similarities about both BE & FE that you learned about today?
+* What are some tools you can use to ensure each person understands the requirements of a given project?
+
+### For BE students:
+
+* What is a Component in React?
+* What is a lifecycle method?
+* What is `fetch`?
+
+### For FE students:
+
+* What are routes?
+* What are controllers? What are actions? 
+* How can you find a controller action for a particular route?
+
+<br>
+
+# Extension
 
 If you have time, answer these questions together:
 
@@ -112,16 +165,4 @@ If you have time, answer these questions together:
 * What are frustrations that FE developers might experience when using technology built by BE developers (for example, accessing an API)?
 * What are some similarities between React and Rails? 
 
-# Checks for Understanding
 
-For BE students:
-
-* What is a Component in React?
-* What is a lifecycle method?
-* What is `fetch`?
-
-For FE students:
-
-* What are routes?
-* What are controllers? What are actions? 
-* How can you find a controller action for a particular route?
