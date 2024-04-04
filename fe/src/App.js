@@ -17,7 +17,7 @@ class App extends React.Component {
       }).then(json => {
         this.setState({welcome_message: json.data.attributes.body})
       }).catch(error => {
-        this.setState({welcome_message: "Could not load welcome message. Make sure the BE is running on localhost:3001"})
+        this.setState({welcome_message: "ERROR: Could not load welcome message. Check DevTools Console for additional information, and make sure the BE is running on localhost:3001."})
       })
   }
   render() {
