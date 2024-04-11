@@ -19,7 +19,7 @@ The rest of this setup assumes you have Homebrew, Node, and npm installed.
 
 The Backend repo uses Ruby 3.2.2, so if you haven't already you will need to install a Ruby version manager and install Ruby 3.2.2. Follow the steps under "Install rbenv" in [these instructions](https://mod0.turing.edu/computer-setup#install-rbenv-back-end-students-only). This will guide you through installing rbenv as well as Ruby 3.2.2.
 
-_NOTE:_ For ease of setup, this Rails app is using a SQLite database instead of PostgreSQL. This won't affect anything else, but BE students may be curious about it! 
+_NOTE:_ For ease of setup, this Rails app is using a SQLite database instead of PostgreSQL. This won't affect anything else, but BE devs may be curious about it! 
 
 ### 2. Get the BE running on localhost:3001
 
@@ -50,7 +50,7 @@ If everything _isn't_ set up correctly, you may see a message that starts with "
 ## Solving CORS
 CORS stands for `Cross-Origin Resource Sharing`. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), or you can search for more topics on your own. 
 
-* ❓ FE devs: What is the difference between a `FETCH` request, and a `GET` request? Help your BE bretheren understand this difference by researching/discussing together before continuing. 
+* ❓ FE devs: What is the difference between a `FETCH` request, and a `GET` request? Help your BE friends understand this difference by researching/discussing together before continuing. 
 
 In a nutshell, CORS is a rule that says a `FETCH` request is different from a normal `GET` request, and _servers_ (or BE applications) should govern which _origins_ (or applications that make FETCH requests) it will send responses to. To do this, the BE application can set a header for every request. That header would look like: 
 
@@ -88,9 +88,9 @@ Ask these questions out loud, and share answers. Ask your partner to help define
 
 In small groups, designate one person to be the screen sharer.
 
-1. FE students: explain to the group what happens when you visit `localhost:3000` in your browser. Start with `index.html` and move to `index.js`. From there, trace all the way through the code up to the point where a request to the BE is made.
-1. BE students: explain to the group what happens when your Rails app receives a request. Trace all the way through the code up to the point that a response is sent back to the FE.
-1. FE students:, explain what happens once the FE app receives the response.
+1. FE devs: explain to the group what happens when you visit `localhost:3000` in your browser. Start with `index.html` and move to `index.js`. From there, trace all the way through the code up to the point where a request to the BE is made.
+1. BE devs: explain to the group what happens when your Rails app receives a request. Trace all the way through the code up to the point that a response is sent back to the FE.
+1. FE devs:, explain what happens once the FE app receives the response.
 1. Once you are finished exploring the code, draw a diagram that illustrates the entire process. Specify which parts are FE and which are BE. 
 
 ## Practice Activity
