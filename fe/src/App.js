@@ -1,30 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react'
+import { useState, useEffect } from 'react';
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      welcome_message: null
-    };
-  }
+function App() {
+  const [welcomeMessage, setWelcomeMessage] = useState(null);
 
-  componentDidMount(){
+  useEffect(() => {
+    fetchMessage();
+  }, []);
+
+  function fetchMessage() {
     fetch('http://localhost:3001/api/v1/welcome')
       .then(response => {
-        return response.json()
+        return response.json();
       }).then(json => {
-        this.setState({welcome_message: json.data.attributes.body})
+        setWelcomeMessage(json.data.attributes.body);
       }).catch(error => {
-        this.setState({welcome_message: "ERROR: Could not load welcome message. Check DevTools Console for additional information, and make sure the BE is running on localhost:3001."})
+        console.log(error);
+        setWelcomeMessage("ERROR: Could not load welcome message. Check DevTools Console for additional information, and make sure the BE is running on localhost:3001.");
       })
   }
-  render() {
-    return (
-      <h1>{this.state.welcome_message}</h1>
-    );
-  }
+
+  return (
+    <h1>{welcomeMessage}</h1>
+  );
 }
 
 export default App;
