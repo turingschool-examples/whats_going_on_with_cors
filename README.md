@@ -19,6 +19,8 @@ The rest of this setup assumes you have Homebrew, Node, and npm installed.
 
 The Backend repo uses Ruby 3.2.2, so if you haven't already you will need to install a Ruby version manager and install Ruby 3.2.2. Follow the steps under "Install rbenv" in [these instructions](https://mod0.turing.edu/computer-setup#install-rbenv-back-end-students-only). This will guide you through installing rbenv as well as Ruby 3.2.2.
 
+_NOTE:_ For ease of setup, this Rails app is using a SQLite database instead of PostgreSQL. This won't affect anything else, but BE students may be curious about it! 
+
 ### 2. Get the BE running on localhost:3001
 
 * Navigate to the be directory: `cd be`
@@ -27,7 +29,7 @@ The Backend repo uses Ruby 3.2.2, so if you haven't already you will need to ins
 * Set up the database: `rails db:{drop,create,migrate,seed}`
 * run the server with `rails server`
 
-After you run the server you should see that it is waiting for requests. Open a new Terminal window to continue with setup.
+After you run the server you should see that it is waiting for requests. You can also navigate to [http://localhost:3001/api/v1/welcome](http://localhost:3001/api/v1/welcome) to simulate a request to your running server. Then, continue on with the FE setup steps below. 
 
 ### 3. Get the FE running on localhost:3000
 In a different terminal window,
