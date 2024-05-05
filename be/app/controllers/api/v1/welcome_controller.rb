@@ -10,6 +10,7 @@ class Api::V1::WelcomeController < ApplicationController
         }
       }
     }
+    # response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
     render json: welcome_message
   end
 end
