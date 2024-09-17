@@ -1,4 +1,4 @@
-# What's Going On in the FE/BE?
+# What's Going On with Cors?
 
 The goal of this activity is to leverage our collective FE and BE knowledge to explain how this application works. At the end of this activity you should have more understanding of how the other side of the stack functions as well as a diagram that illustrates how information flows between FE and BE.
 
@@ -11,15 +11,16 @@ The goal of this activity is to leverage our collective FE and BE knowledge to e
 
 ## Setup
 
+```
+Ruby version: 3.2.2
+Rails version: 7.1.3
+
+Node version: 16.14.2
+npm version: 8.5.0
+```
 Clone this repo and `cd` into it.
 
-The rest of this setup assumes you have Homebrew, Node, and npm installed.
-
-### 1. Install Ruby
-
-The Backend repo uses Ruby 3.2.2, so if you haven't already you will need to install a Ruby version manager and install Ruby 3.2.2. Follow the steps under "Install rbenv" in [these instructions](https://mod0.turing.edu/computer-setup#install-rbenv-back-end-students-only). This will guide you through installing rbenv as well as Ruby 3.2.2.
-
-_NOTE:_ For ease of setup, this Rails app is using a SQLite database instead of PostgreSQL. This won't affect anything else, but BE devs may be curious about it! 
+_NOTE:_ For ease of setup, this Rails app is using a SQLite database instead of PostgreSQL. This won't affect anything else, but you may be curious about it! 
 
 ### 2. Get the BE running on localhost:3001
 
@@ -41,16 +42,16 @@ In a different terminal window,
 
 If everything is set up properly you should see a friendly welcome message.
 
-If everything _isn't_ set up correctly, you may see a message that starts with "ERROR"... Your first task will be to solve this error. To do this, you'll need to collaborate with the other developers on your team! 
+If everything _isn't_ set up correctly, you may see a message that starts with "ERROR"... Your first task will be to solve this error.
 
-1. FE: Look at DevTools' Console. Are there any errors present? Share these messages with your BE partner. 
-2. BE: Check your server logs in terminal. Are there any errors present? Share this terminal with your FE partner.
+1. On the front end, look at DevTools' Console. Are there any errors present? What are they?
+2. On the backend,check your server logs in terminal. Are there any errors present? What are they?
 
 
 ## Solving CORS
 CORS stands for `Cross-Origin Resource Sharing`. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), or you can search for more topics on your own. 
 
-* ❓ FE devs: What is the difference between a `FETCH` request, and a `GET` request? Help your BE friends understand this difference by researching/discussing together before continuing. 
+* ❓ Think Break: What is the difference between a `FETCH` request, and a `GET` request? Make sure everyone understands this difference by researching/discussing together before continuing. 
 
 In a nutshell, CORS is a rule that says a `FETCH` request is different from a normal `GET` request, and _servers_ (or BE applications) should govern which _origins_ (or applications that make FETCH requests) it will send responses to. To do this, the BE application can set a header for every request. That header would look like: 
 
@@ -86,11 +87,11 @@ Ask these questions out loud, and share answers. Ask your partner to help define
 
 ## Exploration Activity
 
-In small groups, designate one person to be the screen sharer.
+In small groups, designate one person to be the screen sharer. Answer the following questions together:
 
-1. FE devs: explain to the group what happens when you visit `localhost:3000` in your browser. Start with `index.html` and move to `index.js`. From there, trace all the way through the code up to the point where a request to the BE is made.
-1. BE devs: explain to the group what happens when your Rails app receives a request. Trace all the way through the code up to the point that a response is sent back to the FE.
-1. FE devs:, explain what happens once the FE app receives the response.
+1. Explain to the group what happens when you visit `localhost:3000` in your browser. Start with `index.html` and move to `index.js`. From there, trace all the way through the code up to the point where a request to the BE is made.
+1. Explain to the group what happens when your Rails app receives a request. Trace all the way through the code up to the point that a response is sent back to the FE.
+1. Explain what happens once the FE app receives the response.
 1. Once you are finished exploring the code, draw a diagram that illustrates the entire process. Specify which parts are FE and which are BE. 
 
 ## Practice Activity
@@ -139,28 +140,8 @@ In both applications, implement the ability to list *all* the messages from the 
 
 ### For all students: 
 
-* What are some similarities about both BE & FE that you learned about today?
 * What are some tools you can use to ensure each person understands the requirements of a given project?
-
-### For BE students:
-
-* What is a Component in React?
-* What is a lifecycle method?
-* What is `fetch`?
-
-### For FE students:
-
-* What are routes?
-* What are controllers? What are actions? 
-* How can you find a controller action for a particular route?
-
-<br>
-
-# Extension
-
-If you have time, answer these questions together:
-
-* Is there any technical vocab words that the developers in the other program use that you don't understand? If so, try to help each other understand the meaning of those words.
+* Are there any technical vocab words that you don't understand? If so, try to help each other understand the meaning of those words.
 * How could you get the app to display one of the other messages found in `seeds.rb`?
 * What’s the difference between a database and an API? Is there an analogy that can help describe this?
 * What are frustrations that BE developers might experience when working with FE developers (for example, building an API/database based on specific requests from the FE team)?
