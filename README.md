@@ -11,6 +11,7 @@ The goal of this activity is to leverage our collective FE and BE knowledge to e
 
 ## Setup
 
+### 1. Verify Versions and Clone the Repo
 ```
 Ruby version: 3.2.2
 Rails version: 7.1.3
