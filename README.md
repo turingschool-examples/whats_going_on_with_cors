@@ -5,7 +5,6 @@ The goal of this activity is to leverage our collective FE and BE knowledge to e
 ## Learning Goals
 
 * Understand how information flows between the FE and BE
-* Get exposure to what the other program has been working on
 * Understand common misconceptions and pain points experienced by FE and BE devs
 * Meet students in the other program
 
@@ -144,9 +143,7 @@ In both applications, implement the ability to list *all* the messages from the 
 * What are some tools you can use to ensure each person understands the requirements of a given project?
 * Are there any technical vocab words that you don't understand? If so, try to help each other understand the meaning of those words.
 * How could you get the app to display one of the other messages found in `seeds.rb`?
-* What’s the difference between a database and an API? Is there an analogy that can help describe this?
-* What are frustrations that BE developers might experience when working with FE developers (for example, building an API/database based on specific requests from the FE team)?
+* What are frustrations that BE developers might experience when working with FE developers that might work on a different team (for example, building an API/database based on specific requests from the FE team)?
 * What are frustrations that FE developers might experience when using technology built by BE developers (for example, accessing an API)?
-* What are some similarities between React and Rails? 
 
 
