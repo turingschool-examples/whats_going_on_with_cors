@@ -8,6 +8,11 @@ The goal of this activity is to leverage our collective FE and BE knowledge to e
 * Understand common misconceptions and pain points experienced by FE and BE devs
 * Meet students in the other program
 
+## Warm Up
+
+* What security vulnerabilities have we learned about so far?
+* What's the difference between a `fetch` call in JS and a regular GET request?
+
 ## Setup
 
 ### 1. Verify Versions and Clone the Repo
@@ -51,7 +56,7 @@ If everything _isn't_ set up correctly, you may see a message that starts with "
 ## Solving CORS
 CORS stands for `Cross-Origin Resource Sharing`. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), or you can search for more topics on your own. 
 
-* ❓ Think Break: What is the difference between a `FETCH` request, and a `GET` request? Make sure everyone understands this difference by researching/discussing together before continuing. 
+* ❓ Think Break: Remember when we talked about the difference between the JavaScript `fetch()` method and regular ol' GET request?
 
 In a nutshell, CORS is a rule that says a `FETCH` request is different from a normal `GET` request, and _servers_ (or BE applications) should govern which _origins_ (or applications that make FETCH requests) it will send responses to. To do this, the BE application can set a header for every request. That header would look like: 
 
