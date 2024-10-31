@@ -1,12 +1,11 @@
 # What's Going On with Cors?
 
-The goal of this activity is to leverage our collective FE and BE knowledge to explain how this application works. At the end of this activity you should have more understanding of how the other side of the stack functions as well as a diagram that illustrates how information flows between FE and BE.
+The goal of this activity is to leverage our collective FE and BE knowledge to explain how this application works. At the end of this activity you should have a diagram that illustrates how information flows between FE and BE, and a deeper understanding of how to mitigate CORS issues in a service-oriented environment.
 
 ## Learning Goals
 
 * Understand how information flows between the FE and BE
 * Understand common misconceptions and pain points experienced by FE and BE devs
-* Meet students in the other program
 
 ## Warm Up
 
