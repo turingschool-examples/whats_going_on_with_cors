@@ -57,7 +57,7 @@ CORS stands for `Cross-Origin Resource Sharing`. Read more about it [here](https
 
 * ❓ Think Break: Remember when we talked about the difference between the JavaScript `fetch()` method and regular ol' GET request?
 
-In a nutshell, CORS is a rule that says a `FETCH` request is different from a normal `GET` request, and _servers_ (or BE applications) should govern which _origins_ (or applications that make FETCH requests) it will send responses to. To do this, the BE application can set a header for every request. That header would look like: 
+In a nutshell, CORS is a rule that says a `FETCH` request is different from a normal `GET` request, and _servers_ (or BE applications) should govern which _origins_ (or applications that make FETCH requests) it will send responses to. This will allow applications to protect their data from being shared with unfamiliar or malicious clients. To do this, the BE application can set a header for every request. That header would look like: 
 
 ```ruby
 
@@ -91,63 +91,20 @@ Ask these questions out loud, and share answers. Ask your partner to help define
 
 ## Exploration Activity
 
-In small groups, designate one person to be the screen sharer. Answer the following questions together:
+In your team, designate one person to be the screen sharer. Answer the following questions together:
 
 1. Explain to the group what happens when you visit `localhost:3000` in your browser. Start with `index.html` and move to `index.js`. From there, trace all the way through the code up to the point where a request to the BE is made.
 1. Explain to the group what happens when your Rails app receives a request. Trace all the way through the code up to the point that a response is sent back to the FE.
 1. Explain what happens once the FE app receives the response.
-1. Once you are finished exploring the code, draw a diagram that illustrates the entire process. Specify which parts are FE and which are BE. 
-
-## Practice Activity
-
-Now that you know how each part of the application handles their request/response cycles, how would you collaborate as a combined team to consume a new set of data? 
-
-In both applications, implement the ability to list *all* the messages from the BE's database on a new FE page. Follow these steps: 
-
-1. Determine what data will be consumed/exposed via API. (For this exercise, we recommend all the `messages` on an `index` page - you may want to add more to the `seeds.rb` file.)
-2. Write a user story.<br>
-   Example:
-   
-   ```text
-   As a user,
-   when I visit the messages index page (/messages)
-   Then I see a list of all the messages in the system as links
-   And when I click on one of the messages,
-   I am taken to that message's show page (/messages/:id)
-   where I only see that message.
-   ```
-4. Agree on a [JSON contract](https://gist.github.com/cjsim89/2597824466ceeef6c9f3c65cd8d57478) for any requests & their responses required to fulfill the user story.<br>
-   Example:
-   ```text
-   REQUEST: 
-   GET /messages
-   - No request body
-   - No additional headers or keys required
-
-   RESPONSE:
-   - JSON format
-
-   {
-      data: {
-         "type": "message",
-         "id": "1",
-         "attributes": {
-            "text": "Here is a message!"
-         }
-   
-      }
-   }
-   ```
-<br>
+1. Once you are finished exploring the code, draw a diagram that illustrates the entire process. Specify which parts are FE and which are BE.
+1. Want to dive into more diagramming? Create a (or enhance an existing) diagram for your consultancy project applications that illustrates the HTTP requests and responses for your most complex user flow. 
 
 # Checks for Understanding
 
 ### For all students: 
 
-* What are some tools you can use to ensure each person understands the requirements of a given project?
 * Are there any technical vocab words that you don't understand? If so, try to help each other understand the meaning of those words.
 * How could you get the app to display one of the other messages found in `seeds.rb`?
-* What are frustrations that BE developers might experience when working with FE developers that might work on a different team (for example, building an API/database based on specific requests from the FE team)?
-* What are frustrations that FE developers might experience when using technology built by BE developers (for example, accessing an API)?
-
+* What change must be made in your Rails API in order to allow your 2 consultancy applications to communicate properly using HTTP?
+* Describe how CORS adds flexibility to othe Same Origin Policy. 
 
