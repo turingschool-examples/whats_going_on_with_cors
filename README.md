@@ -51,6 +51,13 @@ If everything _isn't_ set up correctly, you may see a message that starts with "
 1. On the front end, look at DevTools' Console. Are there any errors present? What are they?
 2. On the backend,check your server logs in terminal. Are there any errors present? What are they?
 
+If you don't see an error message that says something like "ERROR: Could not load welcome message...", it's possible there are versioning issues that could be fixed by running one or both of the following:
+
+1. run `export NODE_OPTIONS=--openssl-legacy-provider`
+2. run `npm install react-scripts@latest`
+
+Once your dependencies are in order, the only error you might see should be the one quoted above. 
+
 
 ## Solving CORS
 CORS stands for `Cross-Origin Resource Sharing`. Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), or you can search for more topics on your own. 
